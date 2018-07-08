@@ -1,0 +1,10 @@
+#! /bin/bash
+git add .
+if [[ -z "$1" ]]
+then
+    comment=$(date);
+else
+    comment="$1";
+fi
+git commit -m "$comment"
+git push origin master
