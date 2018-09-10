@@ -88,7 +88,7 @@ if __name__ == "__main__":
         absence = pltdata['absence']
         failure = pltdata['failure']
         rate = (total - absence - failure) / total
-        stat[user] = [total, absence, failure, "%.2f" % (rate)]
+        stat[user] = [total, absence, failure, "%.1f" % (rate * 100)]
         axes[userid].plot(pltdata['offday'], pltdata['count'])
         axes[userid].set_title(user)
         axes[userid].set_xticks(pltdata['offday'][0::2])
